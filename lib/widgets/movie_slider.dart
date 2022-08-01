@@ -5,7 +5,7 @@ class MovieSlider extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return SizedBox(
       width: double.infinity,
       height: 260,
       child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
@@ -23,7 +23,7 @@ class MovieSlider extends StatelessWidget {
           child: ListView.builder(
               scrollDirection: Axis.horizontal,
               itemCount: 20,
-              itemBuilder: (context, index) => _MoviePoster()),
+              itemBuilder: (context, index) => const _MoviePoster()),
         ),
       ]),
     );
