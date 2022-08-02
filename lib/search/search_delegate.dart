@@ -67,6 +67,7 @@ class _emptyContainer extends StatelessWidget {
 
 class _MovieItem extends StatelessWidget {
   final Movie movie;
+
   const _MovieItem({
     Key? key,
     required this.movie,
@@ -74,12 +75,16 @@ class _MovieItem extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    movie.heroId = 'search-${movie.id}';
     return ListTile(
-      leading: FadeInImage(
-        width: 50,
-        fit: BoxFit.contain,
-        placeholder: const AssetImage('assets/no-image.jpg'),
-        image: NetworkImage(movie.fullPosterImg),
+      leading: Hero(
+        tag: movie.heroId!,
+        child: FadeInImage(
+          width: 50,
+          fit: BoxFit.contain,
+          placeholder: const AssetImage('assets/no-image.jpg'),
+          image: NetworkImage(movie.fullPosterImg),
+        ),
       ),
       title: Text(movie.title),
       subtitle: Text(movie.originalTitle),
