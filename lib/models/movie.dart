@@ -34,14 +34,6 @@ class Movie {
   int voteCount;
   String? heroId;
 
-  get fullPosterImg {
-    if (posterPath != null) {
-      return 'https://image.tmdb.org/t/p/w500$posterPath';
-    } else {
-      return 'https://i.stack.imgur.com/GNhx0.png';
-    }
-  }
-
   get fullbackdropPath {
     if (backdropPath != null) {
       return 'https://image.tmdb.org/t/p/w500$backdropPath';
