@@ -2,6 +2,7 @@ import 'package:card_swiper/card_swiper.dart';
 import 'package:flutter/material.dart';
 import 'package:peliculas/models/movie.dart';
 
+//This is the part of the ui that allows card swiping.
 class CardSwiper extends StatelessWidget {
   final List<Movie> movies;
   const CardSwiper({Key? key, required this.movies}) : super(key: key);
